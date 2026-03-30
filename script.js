@@ -5,15 +5,17 @@ let caixaSelect = document.querySelector('#caixaSelect')
 
 const valorDolarAtual = 5.25
 const valorEuroAtual = 6.03
+let precoBitcoin = 300000
 
 
     let converterValores = () => {
     let valorParaConverter = Number(document.querySelector('#Valor-Converter').value)
-    
+
     if (!valorParaConverter) return
 
     let valorDolarConvertido = valorParaConverter / valorDolarAtual
     let valorEuroConvertido = valorParaConverter / valorEuroAtual
+    let valorBitCoin = valorParaConverter / precoBitcoin
 
     valorReal.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency",
@@ -33,6 +35,10 @@ const valorEuroAtual = 6.03
             currency: "EUR",
         }).format(valorEuroConvertido)
     }
+
+    if(caixaSelect.value == "Bitcoin") {
+        valorDolar.innerHTML = "₿" + valorBitCoin.toFixed(8)
+    }
 }
 
 botaoConverter.addEventListener('click', converterValores)
@@ -48,6 +54,10 @@ caixaSelect.addEventListener("change", () => {
     else if (caixaSelect.value == "US$ Dólar") {
         textoEuro.innerHTML = "Dólar Americano"
         imgDolar.src = "assets/icons8-circular-dos-eua-48.png"
+    }
+    else if(caixaSelect.value == "Bitcoin") {
+        textoEuro.innerHTML = "Bitcoin"
+        imgDolar.src = "assets/icons8-bitcoin-48.png"
     }
     converterValores()
 })
