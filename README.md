@@ -1,6 +1,10 @@
-# 💱 Conversor de Moedas
+---
 
-![Demonstração do Projeto](./assets/thomascamargo2024.github.io_Conversor-De-Moedas_.png)
+## 📷 Demonstração
+
+![Preview do Conversor](./assets/thomascamargo2024.github.io_Conversor-De-Moedas_.png)
+
+---
 
 ## 📌 Sobre o projeto
 
@@ -27,11 +31,6 @@ A aplicação permite converter valores entre moedas de forma simples, rápida e
 
 ---
 
-## 📷 Demonstração
-
-![Preview do Conversor](./assets/thomascamargo2024.github.io_Conversor-De-Moedas_.png)
-
----
 
 ## 🎯 Objetivo do projeto
 
